@@ -1,0 +1,58 @@
+@model List<StudentSuccessPredictor.Models.JournalStudent>
+@{
+    ViewData["Title"] = "Журнал";
+}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Журнал студентів</h3>
+    <a class="btn btn-success" asp-action="Create">Додати студента</a>
+    <form method="post" asp-action="ResetPredictions" class="d-inline">
+        <button class="btn btn-outline-warning"
+                onclick="return confirm('Обнулити всі прогнози?');">
+            Обнулити прогнози
+        </button>
+    </form>
+</div>
+
+<table class="table table-striped align-middle">
+    <thead>
+      <tr>
+        <th>ПІБ</th>
+        <th>Дата нар. (вік)</th>
+        <th>Стать</th>
+        <th>Пропуски</th>
+        <th>Нездачі</th>
+        <th>Вища освіта</th>
+        <th>Репетитори</th>
+        <th>Професія матері</th>
+        <th>Професія батька</th>
+        <th>Попередній бал (0–100)</th>
+        <th>Прогноз (0–100)</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.FullName</td>
+            <td>@(s.DateOfBirth?.ToString("yyyy-MM-dd") ?? "-") (@(s.AgeYears?.ToString() ?? "-"))</td>
+            <td>@s.Sex</td>
+            <td>@s.Absences</td>
+            <td>@s.Failures</td>
+            <td>@(s.Higher ? "так" : "ні")</td>
+            <td>@(s.Tutoring ? "так" : "ні")</td>
+            <td>@s.MotherJob</td>
+            <td>@s.FatherJob</td>
+            <td>@s.PriorScore</td>
+            <td>@(s.PredictedG3?.ToString("0.00") ?? "-")</td>
+            <td class="text-end">
+                <a class="btn btn-sm btn-outline-primary" asp-action="Edit" asp-route-id="@s.Id">Редагувати</a>
+                <form method="post" asp-action="Delete" asp-route-id="@s.Id" class="d-inline"
+                      onsubmit="return confirm('Видалити запис?');">
+                    <button class="btn btn-sm btn-outline-danger" type="submit">Видалити</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,16 @@
+@model StudentSuccessPredictor.Models.PredictResult
+@{
+    ViewData["Title"] = "Результат";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Результат прогнозу</h4>
+        <p class="mb-1"><b>Студент:</b> @Model.FullName (@Model.StudentId)</p>
+        <p class="mb-1"><b>Прогноз G3:</b> @Model.PredictedG3.ToString("0.00") / 100</p>
+        <p class="mb-3"><b>Інтерпретація:</b> @Model.Interpretation</p>
+
+        <a class="btn btn-secondary" asp-action="Index">Назад</a>
+        <a class="btn btn-outline-primary" asp-controller="Journal" asp-action="Index">Журнал</a>
+    </div>
+</div>

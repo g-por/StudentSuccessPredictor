@@ -1,0 +1,55 @@
+@model List<StudentSuccessPredictor.Models.JournalStudent>
+@{
+    ViewData["Title"] = "Прогноз";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Прогноз успішності (G3)</h3>
+    <div class="d-flex gap-2">
+        <form method="post" asp-action="Retrain">
+            <button class="btn btn-outline-secondary" type="submit">Перенавчити модель</button>
+        </form>
+        <form method="post" asp-action="PredictAll">
+            <button class="btn btn-primary" type="submit">Спрогнозувати всім</button>
+        </form>
+    </div>
+</div>
+
+<table class="table table-hover align-middle">
+    <thead>
+        <tr>
+            <th>ПІБ</th>
+            <th>Вхідні дані</th>
+            <th>Поточний прогноз</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.FullName</td>
+            <td>
+                dob=@(s.DateOfBirth?.ToString("yyyy-MM-dd") ?? "-")
+                (@(s.AgeYears?.ToString() ?? "-")),
+                sex=@s.Sex,
+                Mjob=@s.MotherJob,
+                Fjob=@s.FatherJob,
+                prior=@s.PriorScore,
+                abs=@s.Absences,
+                fail=@s.Failures,
+                higher=@(s.Higher ? "y" : "n"),
+                tutor=@(s.Tutoring ? "y" : "n")
+            </td>
+
+            <td>@(s.PredictedG3?.ToString("0.00") ?? "-")</td>
+            <td class="text-end">
+                <form method="post" asp-action="PredictOne">
+                    <input type="hidden" name="StudentId" value="@s.Id" />
+                    <button class="btn btn-sm btn-outline-primary" type="submit">Прогноз</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

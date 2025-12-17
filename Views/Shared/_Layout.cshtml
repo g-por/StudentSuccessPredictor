@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - StudentSuccessPredictor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" asp-controller="Home" asp-action="Index">StudentSuccessPredictor</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" asp-controller="Journal" asp-action="Index">Журнал</a></li>
+                <li class="nav-item"><a class="nav-link" asp-controller="Predict" asp-action="Index">Прогноз</a></li>
+            </ul>
+
+            <form class="d-flex" method="post" asp-controller="Account" asp-action="Logout">
+                <button class="btn btn-outline-light" type="submit">Вийти</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    @RenderBody()
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+@await Html.PartialAsync("_ValidationScriptsPartial")
+@RenderSection("Scripts", required: false)
+</body>
+</html>
