@@ -120,7 +120,6 @@ public class MlStudentModelService
         }
     }
 
-
     public static string Interpret(float g3)
     {
         if (g3 >= 80) return "Висока ймовірність успішного навчання";

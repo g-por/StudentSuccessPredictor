@@ -34,7 +34,6 @@ public class StudentJournalStore
         }
     }
 
-
     public JournalStudent? GetById(string id)
         => GetAll().FirstOrDefault(s => s.Id.Equals(id, StringComparison.OrdinalIgnoreCase));
 
@@ -44,6 +43,7 @@ public class StudentJournalStore
         foreach (var s in list) s.PredictedG3 = null;
         SaveAll(list);
     }
+
     public void Add(JournalStudent student)
     {
         lock (_lock)

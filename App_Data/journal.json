@@ -11,7 +11,7 @@
     "MotherJob": "teacher",
     "FatherJob": "services",
     "PriorScore": 72,
-    "PredictedG3": 72.36972,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.6785776+00:00"
   },
   {
@@ -26,7 +26,7 @@
     "MotherJob": "health",
     "FatherJob": "other",
     "PriorScore": 58,
-    "PredictedG3": 61.005135,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.6802359+00:00"
   },
   {
@@ -41,7 +41,7 @@
     "MotherJob": "at_home",
     "FatherJob": "teacher",
     "PriorScore": 81,
-    "PredictedG3": 78.8738,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.6813112+00:00"
   },
   {
@@ -56,7 +56,7 @@
     "MotherJob": "services",
     "FatherJob": "services",
     "PriorScore": 40,
-    "PredictedG3": 52.18578,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.6823017+00:00"
   },
   {
@@ -71,7 +71,7 @@
     "MotherJob": "other",
     "FatherJob": "health",
     "PriorScore": 90,
-    "PredictedG3": 88.82073,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.6832366+00:00"
   },
   {
@@ -86,7 +86,7 @@
     "MotherJob": "teacher",
     "FatherJob": "teacher",
     "PriorScore": 65,
-    "PredictedG3": 67.8519,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.6842141+00:00"
   },
   {
@@ -101,7 +101,7 @@
     "MotherJob": "services",
     "FatherJob": "other",
     "PriorScore": 50,
-    "PredictedG3": 43.11184,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.6851493+00:00"
   },
   {
@@ -116,7 +116,7 @@
     "MotherJob": "health",
     "FatherJob": "services",
     "PriorScore": 76,
-    "PredictedG3": 75.810326,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.6888195+00:00"
   },
   {
@@ -131,7 +131,7 @@
     "MotherJob": "at_home",
     "FatherJob": "other",
     "PriorScore": 55,
-    "PredictedG3": 57.65402,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.6996915+00:00"
   },
   {
@@ -146,7 +146,7 @@
     "MotherJob": "other",
     "FatherJob": "teacher",
     "PriorScore": 62,
-    "PredictedG3": 66.95538,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.7013551+00:00"
   },
   {
@@ -161,7 +161,7 @@
     "MotherJob": "health",
     "FatherJob": "teacher",
     "PriorScore": 75,
-    "PredictedG3": 74.07048,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.7020506+00:00"
   },
   {
@@ -176,7 +176,7 @@
     "MotherJob": "teacher",
     "FatherJob": "services",
     "PriorScore": 95,
-    "PredictedG3": 89.80705,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.7026901+00:00"
   },
   {
@@ -191,7 +191,7 @@
     "MotherJob": "at_home",
     "FatherJob": "health",
     "PriorScore": 94,
-    "PredictedG3": 93.27476,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.7033166+00:00"
   },
   {
@@ -206,7 +206,7 @@
     "MotherJob": "teacher",
     "FatherJob": "health",
     "PriorScore": 89,
-    "PredictedG3": 83.917015,
+    "PredictedG3": null,
     "LastUpdatedUtc": "2025-12-17T13:55:57.7040978+00:00"
   },
   {
@@ -221,7 +221,22 @@
     "MotherJob": "at_home",
     "FatherJob": "services",
     "PriorScore": 99,
-    "PredictedG3": 89.64158,
-    "LastUpdatedUtc": "2025-12-17T13:56:02.7113697+00:00"
+    "PredictedG3": null,
+    "LastUpdatedUtc": "2025-12-17T15:18:57.5618532+00:00"
+  },
+  {
+    "Id": "ac6f932ceda642409a0ebb11f5fb090b",
+    "FullName": "\u0410\u043D\u0434\u0440\u0456\u0457\u0432 \u041C\u0438\u0445\u0430\u0439\u043B\u043E \u0421\u0435\u0440\u0433\u0456\u0439\u043E\u0432\u0438\u0447",
+    "DateOfBirth": "2009-06-12T00:00:00",
+    "Sex": "M",
+    "Absences": 20,
+    "Failures": 0,
+    "Higher": true,
+    "Tutoring": true,
+    "MotherJob": "teacher",
+    "FatherJob": "services",
+    "PriorScore": 98,
+    "PredictedG3": 96.45794,
+    "LastUpdatedUtc": "2025-12-18T05:28:32.9201511+00:00"
   }
 ]

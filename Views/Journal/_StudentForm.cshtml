@@ -14,8 +14,8 @@
             <label class="form-label">Дата народження</label>
             @{
                 var today = DateTime.Today;
-                var maxDob = today.AddYears(-10);   // мін. 10 років
-                var minDob = today.AddYears(-120);  // макс. 120 років
+                var maxDob = today.AddYears(-10);
+                var minDob = today.AddYears(-120);
             }
             <input asp-for="DateOfBirth"
                    type="date"

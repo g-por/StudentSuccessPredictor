@@ -1,6 +1,5 @@
 namespace StudentSuccessPredictor.Models.Ml;
 
-// Спрощений вхід: відповідає вашому варіанту (вік, стать, професії, попередні бали)
 public class StudentInputRow
 {
     public float Age { get; set; }

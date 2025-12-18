@@ -4,7 +4,6 @@ namespace StudentSuccessPredictor.Controllers;
 
 public class AccountController : Controller
 {
-    // Демонстраційно: пароль фіксований у коді (для лаби це ок)
     private const string DemoLogin = "teacher";
     private const string DemoPassword = "12345";
 

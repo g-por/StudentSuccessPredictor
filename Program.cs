@@ -24,7 +24,6 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
 
-// простий “захист” для Journal/Predict: перевірка сесії
 app.Use(async (ctx, next) =>
 {
     var path = ctx.Request.Path.Value ?? "";
@@ -40,7 +39,6 @@ app.Use(async (ctx, next) =>
     await next();
 });
 
-// тренуємо/завантажуємо модель при старті
 using (var scope = app.Services.CreateScope())
 {
     var ml = scope.ServiceProvider.GetRequiredService<MlStudentModelService>();

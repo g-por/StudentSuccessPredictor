@@ -49,7 +49,6 @@ public class JournalStudent
     [Required]
     public string FatherJob { get; set; } = "other";
 
-    // 0..100
     [Range(0, 100)]
     public float PriorScore { get; set; }
 

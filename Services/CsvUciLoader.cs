@@ -12,7 +12,6 @@ public static class CsvUciLoader
         var header = reader.ReadLine();
         if (header is null) yield break;
 
-        // UCI часто з заголовком у лапках і роздільником ';'
         var cols = SplitUciLine(header);
         var idxAge = Array.IndexOf(cols, "age");
         var idxSex = Array.IndexOf(cols, "sex");
